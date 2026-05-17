@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import fs from 'fs';
+import injectHTML from 'vite-plugin-html-inject';
 import autoprefixer from 'autoprefixer';
 
 const root = __dirname;
@@ -19,18 +20,13 @@ function getHtmlInputs() {
 export default defineConfig({
   base: './',
   root,
+  plugins: [
+    injectHTML({}),
+  ],
   css: {
     postcss: {
       plugins: [autoprefixer()]
     },
-    preprocessorOptions: {
-      scss: {
-        additionalData: `
-          @import "src/scss/abstracts/_variables.scss";
-          @import "src/scss/abstracts/_placeholders.scss";
-        `
-      }
-    }
   },
   server: {
     open: true,

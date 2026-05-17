@@ -62,5 +62,27 @@
 
 
 html, body {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 127.9%;
+  color: #000;
+}
 
+@media (max-width: 1440px) {
+  html, body {
+    // font-size: ;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+
+  }
+}
+
+@media (max-width: 375px) {
+  html, body {
+
+  }
 }
