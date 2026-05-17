@@ -1,0 +1,11 @@
+// wrapper - необходим для того, чтобы прижать подвал к низу сайта
+html, body, .wrapper {
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  margin-top: auto;
+}

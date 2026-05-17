@@ -1,0 +1,15 @@
+@import 'abstracts/variables';
+@import 'abstracts/placeholders';
+@import 'abstracts/animtations';
+
+@import 'vendors/reset';
+
+@import 'base/base';
+@import 'base/typography';
+
+// @import 'components/custom-cursor';
+
+@import 'layout/wrapper';
+@import 'layout/container';
+
+@import 'pages/page';

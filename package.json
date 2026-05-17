@@ -10,5 +10,11 @@
   },
   "devDependencies": {
     "vite": "^8.0.12"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.5.0",
+    "file-system": "^2.2.2",
+    "resolve": "^1.22.12",
+    "vite-plugin-html-inject": "^1.1.2"
   }
 }
