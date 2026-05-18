@@ -1,0 +1,35 @@
+.up-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: $primaryColor;
+    transition: 0.2s all;
+    &::after {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        background: url("data:image/svg+xml,%3Csvg width='15' height='24' viewBox='0 0 15 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.28536 0C7.44025 1.35415e-08 7.59449 0.0307207 7.73751 0.0908203C7.88042 0.150917 8.01023 0.239675 8.11934 0.350586L14.3176 6.60938C14.6604 6.9556 14.6604 7.51409 14.3176 7.86035C13.97 8.21128 13.4025 8.21127 13.0549 7.86035L8.28731 3.0459V22.0977C8.28707 22.6497 7.83945 23.0977 7.28731 23.0977C6.73538 23.0974 6.28755 22.6496 6.28731 22.0977V3.0459L1.52071 7.86035C1.17273 8.21179 0.60484 8.21197 0.257037 7.86035C-0.0856273 7.51392 -0.0857308 6.9557 0.257037 6.60938L6.45235 0.350586C6.56148 0.239664 6.69126 0.150918 6.83419 0.0908203C6.97706 0.0307805 7.13062 6.15017e-05 7.28536 0Z' fill='white' /%3E%3C/svg%3E") $primaryColor no-repeat center / 0.7285rem 1.155rem;
+        border-radius: 0.5rem;
+        transition: inherit;
+    }
+    &:hover {
+        color: $darkenPrimaryColor;
+        &::after {
+            background-color: $darkenPrimaryColor;
+        }
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .up-btn {
+        gap: 0.7142rem;
+        font-size: 1.1428rem;
+        &::after {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5714rem;
+        }
+    }
+}

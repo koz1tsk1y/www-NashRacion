@@ -1,0 +1,85 @@
+.footer {
+    background: $secondaryColor;
+    &__container {
+        position: relative;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    &__callout-bg {
+        @extend %absolute-fullzise;
+        pointer-events: none;
+        &-item {
+            position: absolute;
+            background: url("data:image/svg+xml,%3Csvg width='504' height='398' viewBox='0 0 504 398' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' d='M4.78412 261.046C-5.44546 285.323 0.562161 318.616 24.4261 329.794C32.2799 333.47 41.1324 334.423 49.8033 334.392C81.8842 334.287 113.269 320.34 136.074 297.893C130.323 312.339 127.478 327.949 128.084 343.483C128.659 358.08 133.229 374.129 145.834 381.525C152.114 385.216 159.605 386.23 166.883 386.502C223.282 388.635 277.986 345.434 288.957 290.103C288.821 312.853 288.806 336.283 297.311 357.399C305.815 378.515 325.003 396.999 347.762 397.544C374.819 398.179 396.973 373.1 402.497 346.629C406.764 326.239 403.586 305.365 398.653 284.915C409.881 302.552 438.315 310.675 456.686 297.878C480.58 281.224 481.882 243.001 463.647 220.281C425.982 173.375 389.256 207.424 429.781 136.952C449.907 101.95 473.135 24.6858 503.309 4.63039e-05C444.837 47.859 390.845 101.209 342.315 159.111C340.665 134.879 338.834 109.952 328.135 88.1397C317.452 66.3279 295.601 48.1464 271.328 49.3111C237.159 50.9447 216.17 86.975 205.138 119.33C189.461 69.7767 138.011 34.0035 86.076 36.5598C62.5298 37.7245 36.8197 48.5548 28.8751 70.7296C21.2635 91.9969 42.2371 119.829 62.8778 113.461C40.1639 122.173 17.9948 138.222 13.3794 161.91C8.56724 186.52 35.1248 214.76 57.4452 203.279C36.6532 219.48 15.0137 236.738 4.78412 261.031L4.78412 261.046Z' fill='%23B1BD57' /%3E%3C/svg%3E") no-repeat center / contain;
+            &:nth-child(1) {
+                top: 11.5rem;
+                left: -7rem;
+                width: 25.2rem;
+                height: 19.9rem;
+                transform: rotate(-10deg);
+            }
+        }
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+    &__logo {
+        width: 10.6rem;
+        height: 3.8rem;
+    }
+    &__up-btn {
+        margin-left: auto;
+    }
+    &__columns {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between
+    }
+    &__column {
+        @extend %flex-column;
+        gap: 1rem;
+        flex-shrink: 0;
+        max-width: 10.15rem;
+        &-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #fff;
+        }
+    }
+    &__nav {
+        &-list {
+            @extend %flex-column;
+            gap: 0.75rem;
+        }
+        &-link {
+            @extend %underline;
+            color: #fff;
+        }
+    }
+    &__contacts {
+        @extend %flex-column;
+        gap: 0.75rem;
+    }
+    &__contact {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+    }
+    &__links {
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+    &__link {
+        color: #fff;
+        opacity: 0.7;
+        transition: 0.2s all;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

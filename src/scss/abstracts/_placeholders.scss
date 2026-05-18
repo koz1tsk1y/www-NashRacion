@@ -48,6 +48,25 @@
   height: 100%;
 }
 
+%underline {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0.05rem;
+    background: #fff;
+    transition: 0.2s all;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
 %custom-scrollbar {
   &::-webkit-scrollbar {
     width: 0.20833rem;
