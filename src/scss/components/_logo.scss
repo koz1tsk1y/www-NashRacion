@@ -1,3 +1,20 @@
 .logo {
- display: none; 
+    display: inline-block;
+    width: 8.35rem;
+    height: 3rem;
+    img, svg {
+        @extend %contain-media;
+    }
+}
+
+@media (max-width: 768px) {
+    // .logo {
+    // }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 7.9478rem;
+        height: 2.85717rem;
+    }
 }

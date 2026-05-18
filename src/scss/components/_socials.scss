@@ -1,0 +1,38 @@
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    &__item {
+        @extend %flex-center;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: $primaryColor;
+        border-radius: 0.5rem;
+        transition: 0.2s all;
+        img {
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+        }
+        &:hover {
+            background: $darkenPrimaryColor;
+        }
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .socials {
+        gap: 1.07142rem;
+        &__item {
+            width: 2.8571rem;
+            height: 2.8571rem;
+            border-radius: 0.71428rem;
+            img {
+                width: 55%;
+                height: 55%;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.btn {
+    display: block;
+    width: fit-content;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    background: $primaryColor;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 122%;
+    color: #fff;
+    text-align: center;
+    transition: 0.2s all;
+    &:hover {
+        background: $darkenPrimaryColor;
+    }
+    
+    &--empty {
+        background: transparent;
+        border: 0.05rem solid #fff;
+        &:hover {
+            background: #fff;
+            color: $secondaryColor;
+        }
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 0.7142rem 1.4285rem;
+        border-radius: 0.7142rem;
+        font-size: 1rem;
+        
+        &--empty {
+            border: 0.07rem solid #fff;
+        }
+    }
+}

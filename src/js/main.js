@@ -1,8 +1,8 @@
 
 import '../scss/style.scss'
 
-// import { customCursor } from './_customCursor.js';
+import { headerInit } from './_header.js';
 
 document.addEventListener( 'DOMContentLoaded', function() {
-  // customCursor();
+  headerInit();
 })
