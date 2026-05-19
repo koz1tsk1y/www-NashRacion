@@ -1,0 +1,169 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    &__tabs {
+        display: flex;
+        overflow: auto;
+    }
+    &__tab {
+        min-width: 13.75rem;
+        &--active {
+            pointer-events: none;
+        }
+        &:not(&--active) {
+            background: #fff;
+            border-color: rgba(#144534, 30%);
+            color: $secondaryColor;
+            &:hover {
+                background: $darkenPrimaryColor;
+                border-color: $darkenPrimaryColor;
+                color: #fff;
+            }
+        }
+        &:not(:last-child) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        &:not(:first-child) {
+            margin-left: -0.6rem;
+        }
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        &-image {
+            border: 0.05rem solid rgba(#144534, 30%);
+            border-radius: 1rem;
+            position: relative;
+            padding-bottom: 111.112%;
+            img {
+                @extend %absolute-center;
+                width: 64.65%;
+                height: 76%;
+                object-fit: contain;
+            }
+        }
+        a.cards__item-image {
+            transition: 0.2s all;
+            img {
+                transition: inherit;
+            }
+            &:hover {
+                img {
+                    transform: translate(-50%, -50%) scale(1.05);
+                }
+            }
+        }
+        &-title {
+            font-family: 'Intro Head R Base', sans-serif;
+            font-size: 1.6rem;
+            font-weight: bold;
+            line-height: 120%;
+            color: $secondaryColor;
+            text-transform: uppercase;
+            &:not(:first-child) {
+                margin-top: 1rem;
+            }
+        }
+        a.cards__item-title {
+            transition: 0.2s all;
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+        &-excerpt {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            &:not(:first-child) {
+                margin-top: 0.5rem;
+            }
+        }
+        &-additional {
+            &:not(:first-child) {
+                margin-top: 0.5rem;
+            }
+        }
+        &-btn {
+            width: 100%;
+            padding: 0.6rem 0.5rem;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            &:not(:first-child) {
+                margin-top: 1rem;
+            }
+        }
+
+        &--hidden {
+            display: none;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .cards {
+        &__tab {
+            min-width: 9rem;
+            font-size: 1rem;
+        }
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .cards {
+        gap: 1.0714rem;
+        &__tab {
+            min-width: 0;
+            width: 100%;
+            border-radius: 0.7143rem;
+            font-size: 1.14283rem;
+        }
+        &__items {
+            gap: 1.07141rem;
+        }
+        &__item {
+            &-image {
+                border-width: 0.07144rem;
+                border-radius: 1.07141rem;
+                padding-bottom: 112.2%;
+            }
+            &-title {
+                font-size: 1.4289rem;
+                &:not(:first-child) {
+                    margin-top: 0.7857rem;
+                }
+            }
+            &-excerpt {
+                &:not(:first-child) {
+                    margin-top: 0.7143rem;
+                }
+            }
+            &-additional {
+                &:not(:first-child) {
+                    margin-top: 0.7143rem;
+                }
+            }
+            &-btn {
+                padding: 0.71423rem 1.42859rem;
+                border-radius: 0.71423rem;
+                &:not(:first-child) {
+                    margin-top: 1.0711rem;
+                }
+            }
+        }
+    }   
+}

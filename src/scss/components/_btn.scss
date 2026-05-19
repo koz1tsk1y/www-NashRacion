@@ -4,6 +4,7 @@
     padding: 0.75rem 1.5rem;
     border-radius: 0.75rem;
     background: $primaryColor;
+    border: 0.05rem solid $primaryColor;
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 122%;
@@ -12,13 +13,15 @@
     transition: 0.2s all;
     &:hover {
         background: $darkenPrimaryColor;
+        border-color: $darkenPrimaryColor;
     }
     
     &--empty {
         background: transparent;
-        border: 0.05rem solid #fff;
+        border-color: #fff;
         &:hover {
             background: #fff;
+            border-color: #fff;
             color: $secondaryColor;
         }
     }
