@@ -1,0 +1,69 @@
+.highlights {
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+        &-icon {
+            width: 6rem;
+            height: 6rem;
+            img {
+                @extend %contain-media;
+            }
+        }
+        &-title {
+            font-family: 'Intro Head R Base', sans-serif;
+            font-size: 2.4rem;
+            font-weight: bold;
+            line-height: 120%;
+            letter-spacing: 3%;
+            color: $secondaryColor;
+            text-transform: uppercase;
+        }
+        &-text {
+            color: #fff;
+        }
+    }
+    &__btn {
+        margin: 2.5rem auto 0;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .highlights {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 30rem;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .highlights {
+        &__items {
+            max-width: 100%;
+            column-gap: 1.0711rem;
+            row-gap: 2.6423rem;
+        }
+        &__item {
+            gap: 0.7143rem;
+            &-title {
+                font-size: 1.71424rem;
+            }
+        }
+        &__btn {
+            display: none;
+        }
+    }
+}

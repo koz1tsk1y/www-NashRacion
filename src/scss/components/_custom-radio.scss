@@ -1,0 +1,51 @@
+.custom-radio {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 2.5rem;
+        border: 0.05rem solid $secondaryColor;
+        border-radius: 0.75rem;
+        font-size: 1.2rem;
+        color: $secondaryColor;
+        cursor: pointer;
+        transition: 0.2s all;
+        img {
+            width: 1.45rem;
+            height: 1.45rem;
+            object-fit: contain;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        &:has(input[type=radio]:not(:checked)) {
+            opacity: 0.5;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        &:has(input[type=radio]:checked) {
+            pointer-events: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-radio {
+        gap: 1.07141rem;
+        &__item {
+            gap: 0.7143rem;
+            padding: 0.8571rem 2.14283rem;
+            border-width: 0.0714rem;
+            border-radius: 0.71423rem;
+            font-size: 1.14283rem;
+            img {
+                width: 1.35717rem;
+                height: 1.35717rem;
+            }
+        }
+    }
+}

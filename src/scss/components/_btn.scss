@@ -25,6 +25,18 @@
             color: $secondaryColor;
         }
     }
+
+    &--white {
+        background: #fff;
+        border-color: #fff;
+        font-size: 1.2rem;
+        color: $secondaryColor;
+        &:hover {
+            background: transparent;
+            border-color: #fff;
+            color: #fff;
+        }
+    }
 }
 
 
