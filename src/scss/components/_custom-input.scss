@@ -1,0 +1,38 @@
+.custom-input {
+    position: relative;
+    width: fit-content;
+    input {
+        padding: 0.75rem 2.5rem 0.75rem 1rem;
+        border: 0.05rem solid $secondaryColor;
+        border-radius: 0.75rem;
+        font-size: 1.2rem;
+        line-height: 1;
+        color: $secondaryColor;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__after {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        color: $secondaryColor;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .custom-input {
+        input {
+            border-width: 0.0714rem;
+            border-radius: 0.71423rem;
+            font-size: 1.1423rem;
+        }
+        &__after {
+            font-size: 1.1423rem;
+        }
+    }
+}

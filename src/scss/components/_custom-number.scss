@@ -25,12 +25,29 @@
     }
     &__input {
         width: 100%;
-        padding: 0 1.5rem;
+        padding: 0 0.5rem;
         font-size: 1.6rem;
         color: $secondaryColor;
-        font-weight: bold;
+        text-align: center;
         &:focus {
             outline: none;
+        }
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .custom-number {
+        // width: 11.7141rem;
+        border-radius: 1.0711rem;
+        &__btn {
+            width: 3.0711rem;
+            height: 3.0711rem;
+        }
+        &__input {
+            // padding: 0 0.5rem;
+            font-size: 1.4289rem;
         }
     }
 }

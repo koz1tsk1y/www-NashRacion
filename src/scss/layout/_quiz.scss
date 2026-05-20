@@ -2,13 +2,16 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    overflow: hidden;
     &__tabs {
         display: flex;
         gap: 1rem;
         overflow: auto;
+        padding-bottom: 0.5rem;
     }
     &__tab {
         width: 10.2rem;
+        min-width: 3rem;
         height: 0.25rem;
         background: $primaryColor;
         border-radius: 0.5rem;
@@ -22,7 +25,17 @@
             pointer-events: none;
         }
     }
+    &__items {
+        display: flex;
+    }
     &__item {
+        flex: 0 0 100%;
+        &-inner {
+            display: flex;
+            column-gap: 5rem;
+            row-gap: 3rem;
+            flex-wrap: wrap;
+        }
         &-group {
             display: flex;
             flex-direction: column;
@@ -38,8 +51,98 @@
                 display: flex;
                 align-items: center;
                 gap: 1rem;
+                flex-wrap: wrap;
             }
-            
+        }
+        
+        &:not(&--active) {
+            display: none;
+        }
+        
+        &--error {
+            &::after {
+                content: 'Заполните все поля, прежде чем перейти к следующему шагу';
+                display: block;
+                margin-top: 1rem;
+                color: red;
+            }
         }
     }
+    &__btns {
+        display: flex;
+        gap: 0.75rem;
+    }
+    &__btn {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    &:not(:has(.quiz__item:nth-last-child(2).quiz__item--active)) .quiz__submit,
+    &:has(.quiz__item:nth-last-child(2).quiz__item--active) .quiz__btn-next,
+    &:has(.quiz__item-result.quiz__item--active) .quiz__btn-next,
+    &:has(.quiz__item:nth-child(1).quiz__item--active) .quiz__btn-prev {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .quiz {
+        &__tabs {
+            gap: 0.5rem;
+        }
+        &__item {
+            &-inner {
+                column-gap: 3rem;
+            }
+            &-group {
+                &-title {
+                    &:not(:last-child) {
+                        margin-bottom: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .quiz {
+        gap: 1.0711rem;
+        &__tabs {
+            gap: 0.3571rem;
+        }
+        &__tab {
+            min-width: 1.5rem;
+            border-radius: 0.7143rem;
+        }
+        &__item {
+            &-inner {
+                flex-direction: column;
+                gap: 1.0711rem;
+            }
+            &-group {
+                &-title {
+                    font-size: 1.4289rem;
+                    &:not(:last-child) {
+                        margin-bottom: 1.0711rem;
+                    }
+                }
+                &-row {
+                    gap: 1.0711rem;
+                }
+            }
+            
+            &--error {
+                &::after {
+                    margin-top: 0.85rem;
+                }
+            }
+        }
+        &__btns {
+            gap: 0.5rem;
+        }
+    }   
 }
