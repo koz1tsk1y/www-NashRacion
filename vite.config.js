@@ -1,32 +1,27 @@
-import { defineConfig } from 'vite';
-import { resolve } from 'path';
-import fs from 'fs';
+import {
+  defineConfig
+} from 'vite';
 import injectHTML from 'vite-plugin-html-inject';
+import {
+  resolve
+} from 'path';
 import autoprefixer from 'autoprefixer';
 
-const root = __dirname;
+const root = resolve(__dirname, '');
 const outDir = resolve(__dirname, 'dist');
-
-function getHtmlInputs() {
-  return fs.readdirSync(root)
-    .filter(f => f.endsWith('.html'))
-    .reduce((acc, f) => {
-      const name = f.replace(/\.html$/, '');
-      acc[name] = resolve(root, f);
-      return acc;
-    }, {});
-}
 
 export default defineConfig({
   base: './',
   root,
   plugins: [
-    injectHTML(),
+    injectHTML({}),
   ],
   css: {
     postcss: {
-      plugins: [autoprefixer()],
-    },
+      plugins: [
+        autoprefixer()
+      ]
+    }
   },
   server: {
     open: true,
@@ -36,16 +31,20 @@ export default defineConfig({
     outDir,
     emptyOutDir: true,
     rollupOptions: {
-      input: getHtmlInputs(),
+      input: {
+        main: resolve(root, 'index.html'),
+      },
       output: {
-        entryFileNames: 'js/[name].js',
-        chunkFileNames: 'js/[name].js',
-        assetFileNames: assetInfo => {
-          const ext = assetInfo.name?.split('.').pop();
-
-          if (ext === 'css') return 'css/[name].[ext]';
-
-          return '[name].[ext]';
+        entryFileNames: `js/main.js`,
+        chunkFileNames: `js/[name].js`,
+        assetFileNames: ({
+          name
+        }) => {
+          if (name.endsWith('.css')) return 'css/style.css';
+          if (name.endsWith('.woff') || name.endsWith('.woff2') || name.endsWith('.ttf')) return 'fonts/[name].[ext]';
+          if (name.endsWith('.png') || name.endsWith('.jpg') || name.endsWith('.jpeg') || name.endsWith('.svg')) return 'images/[name].[ext]';
+          if (name.endsWith('.mp4') || name.endsWith('.webm')) return 'videos/[name].[ext]';
+          return 'assets/[name].[ext]';
         }
       }
     }
