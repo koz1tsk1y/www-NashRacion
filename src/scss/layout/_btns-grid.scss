@@ -1,0 +1,28 @@
+.btns-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    &__btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .btns-grid {
+        grid-template-columns: repeat(2, 1fr);
+        &__btn {
+            @media (min-width: 481px) {
+                &:last-child:nth-child(odd) {
+                    transform: translateX(calc(50% + 0.5rem));
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .btns-grid {
+        grid-template-columns: 1fr;
+        gap: 1.42859rem;
+    }
+}

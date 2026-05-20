@@ -1,0 +1,32 @@
+.map-control {
+    &__text {
+        b, strong {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: $secondaryColor;
+        }
+        margin-bottom: 1rem;
+    }
+    &__select {
+        max-width: 100%;
+        width: 28rem;
+        margin-bottom: 1.5rem;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+    .map-control {
+        &__text {
+            b, strong {
+                font-size: 1.4289rem;
+            }
+            margin-bottom: 1.07141rem;
+        }
+        &__select {
+            margin-bottom: 1.07141rem;
+        }
+    }   
+}

@@ -8,24 +8,24 @@ const root = __dirname;
 const outDir = resolve(__dirname, 'dist');
 
 function getHtmlInputs() {
-  const files = fs.readdirSync(root).filter(f => f.endsWith('.html'));
-  const inputs = {};
-  files.forEach(f => {
-    const name = f.replace(/\.html$/, '');
-    inputs[name] = resolve(root, f);
-  });
-  return inputs;
+  return fs.readdirSync(root)
+    .filter(f => f.endsWith('.html'))
+    .reduce((acc, f) => {
+      const name = f.replace(/\.html$/, '');
+      acc[name] = resolve(root, f);
+      return acc;
+    }, {});
 }
 
 export default defineConfig({
   base: './',
   root,
   plugins: [
-    injectHTML({}),
+    injectHTML(),
   ],
   css: {
     postcss: {
-      plugins: [autoprefixer()]
+      plugins: [autoprefixer()],
     },
   },
   server: {
@@ -40,9 +40,11 @@ export default defineConfig({
       output: {
         entryFileNames: 'js/[name].js',
         chunkFileNames: 'js/[name].js',
-        assetFileNames: ({ name }) => {
-          if (name && name.endsWith('.css')) return 'css/[name].[ext]';
-          // всё остальное пусть идёт в корень dist
+        assetFileNames: assetInfo => {
+          const ext = assetInfo.name?.split('.').pop();
+
+          if (ext === 'css') return 'css/[name].[ext]';
+
           return '[name].[ext]';
         }
       }

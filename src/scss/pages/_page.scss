@@ -1,3 +1,6 @@
+// ======================================
+// .hero-section
+// ======================================
 .hero-section {
     position: relative;
     min-height: 45rem;
@@ -43,7 +46,6 @@
 }
 
 
-
 @media (max-width: 480px) {
     .hero-section {
         min-height: 41.714rem;
@@ -71,4 +73,94 @@
             }
         }
     }
+}
+
+
+
+
+// ======================================
+// .shops-section
+// ======================================
+.shops-section {
+    &__container {
+        position: relative;
+    }
+    &__callout {
+        pointer-events: none;
+        position: absolute;
+        top: -11rem;
+        right: -24rem;
+        width: 35.65rem;
+        height: 28.15rem;
+        transform: rotate(49deg);
+        background: url("data:image/svg+xml,%3Csvg width='713' height='563' viewBox='0 0 713 563' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M6.77424 369.656C-7.71062 404.034 0.796047 451.178 34.5869 467.007C45.7077 472.212 58.2427 473.561 70.5205 473.519C115.946 473.369 160.387 453.62 192.678 421.834C184.535 442.289 180.507 464.394 181.364 486.392C182.178 507.061 188.649 529.787 206.498 540.261C215.391 545.488 225.997 546.923 236.304 547.308C316.163 550.328 393.623 489.155 409.158 410.803C408.965 443.017 408.944 476.196 420.986 506.097C433.028 535.999 460.198 562.173 492.424 562.944C530.736 563.844 562.106 528.331 569.927 490.847C575.969 461.973 571.47 432.415 564.484 403.456C580.384 428.431 620.645 439.933 646.658 421.812C680.492 398.229 682.335 344.103 656.515 311.931C603.182 245.509 551.178 293.724 608.56 193.931C637.059 144.367 669.95 34.9564 712.676 -1.88214e-05C629.881 67.7709 553.428 143.317 484.711 225.311C482.375 190.997 479.782 155.698 464.633 124.811C449.505 93.924 418.564 68.1779 384.195 69.8272C335.812 72.1405 306.092 123.162 290.472 168.978C268.273 98.8077 195.42 48.1508 121.882 51.7707C88.5409 53.42 52.1359 68.7563 40.8865 100.157C30.1086 130.273 59.8069 169.684 89.0337 160.667C56.8713 173.004 25.4803 195.73 18.9449 229.273C12.131 264.123 49.736 304.113 81.3413 287.855C51.9001 310.795 21.2591 335.235 6.77424 369.634L6.77424 369.656Z' fill='%23B1BD57' /%3E%3C/svg%3E") no-repeat center / contain;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .shops-section {
+        &__callout {
+            top: -5rem;
+            right: -8.5rem;
+            width: 17rem;
+            height: 13.4283rem;
+            transform: rotate(74deg);
+        }
+    } 
+}
+
+
+
+
+
+// ======================================
+// .get-section
+// ======================================
+.get-section {
+    &__container {
+        @media (min-width: 481px) {
+            padding-bottom: 2rem !important;
+        }
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    &__content {
+       display: flex; 
+       flex-direction: column;
+    }
+    &__title {
+        max-width: 34rem;
+    }
+    &__custom-form {
+        max-width: 21.35rem;
+    }
+    &__image {
+        flex-shrink: 0;
+        width: 17.65rem;
+        height: 25rem;
+        margin-bottom: -4rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .get-section {
+        &__image {
+            display: none;
+        }
+    }   
+}
+
+
+@media (max-width: 768px) {
+    .get-section {
+        &__title {
+            max-width: 100%;
+        }
+        &__custom-form {
+            max-width: 100%;
+        }
+    }  
 }
