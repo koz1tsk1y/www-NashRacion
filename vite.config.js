@@ -33,6 +33,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(root, 'index.html'),
+        catalog: resolve(root, 'catalog.html'),
       },
       output: {
         entryFileNames: `js/main.js`,

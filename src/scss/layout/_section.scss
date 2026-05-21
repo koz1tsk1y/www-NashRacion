@@ -1,5 +1,10 @@
 .section {
-    margin-top: 3rem;
+    & + & {
+        margin-top: 3rem;
+    }
+    &:last-child:not(&--beautiful) {
+        margin-bottom: 5rem;
+    }
     &__inner {
         position: relative;
         z-index: 2;
@@ -57,7 +62,12 @@
 
 @media (max-width: 480px) {
     .section {
-        margin-top: 3.57141rem;
+        & + & {
+            margin-top: 3.57141rem;
+        }
+        &:last-child:not(&--beautiful) {
+            margin-bottom: 3.57141rem;
+        }
         &__title {
             margin-bottom: 1.07141rem;
         }

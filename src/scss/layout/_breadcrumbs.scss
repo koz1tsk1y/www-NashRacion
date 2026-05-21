@@ -1,0 +1,38 @@
+.breadcrumbs {
+    margin: 1rem 0;
+    &__list {
+        display: flex;
+        gap: 1.3rem;
+        overflow: auto;
+    }
+    &__item {
+        position: relative;
+        color: rgba(#000, 40%);
+        transition: 0.2s all;
+        white-space: nowrap;
+        &:not(:first-child) {
+            &::before {
+                content: '/';
+                position: absolute;
+                top: 50%;
+                right: calc(100% + 0.5rem);
+                transform: translateY(-50%);
+            }
+        }
+        &:hover {
+            color: rgba(#000, 60%);
+        }
+        &--current {
+            color: #000;
+            pointer-events: none;
+        }
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .breadcrumbs {
+        margin: 1.07141rem 0;
+    }
+}

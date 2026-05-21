@@ -1,0 +1,131 @@
+<div class="quiz">
+    <div class="quiz__text">
+        <p>Каждый питомец нуждается в особом рационе. С помощью этой анкеты мы поможем вам подобрать корм с учетом всех особенностей.</p>
+    </div>
+    <div class="quiz__tabs">
+        <button class="quiz__tab"></button>
+        <button class="quiz__tab"></button>
+        <button class="quiz__tab"></button>
+        <button class="quiz__tab"></button>
+        <button class="quiz__tab"></button>
+    </div>
+    <div class="quiz__items">
+        <div class="quiz__item">
+            <div class="quiz__item-inner">
+                <div class="quiz__item-group">
+                    <strong class="quiz__item-group-title">Укажите пол питомца</strong>
+                    <div class="custom-radio">
+                        <label class="custom-radio__item">
+                            <input type="radio" name="sex" value="he">
+                            <img src="public/images/icons/he-icon.svg" alt="he">
+                            <span>Самец</span>
+                        </label>
+                        <label class="custom-radio__item">
+                            <input type="radio" name="sex" value="she">
+                            <img src="public/images/icons/she-icon.svg" alt="she">
+                            <span>Самка</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="quiz__item-group">
+                    <strong class="quiz__item-group-title">Укажите возраст</strong>
+                    <div class="quiz__item-group-row">
+                        <div class="custom-number" data-number-min="0">
+                            <button class="custom-number__btn custom-number__btn-minus"></button>
+                            <input class="custom-number__input" type="text" name="age">
+                            <button class="custom-number__btn custom-number__btn-plus"></button>
+                        </div>
+                        <div class="custom-select">
+                            <input type="hidden" name="type-age">
+                            <span class="custom-select__label">Выберите</span>
+                            <ul class="custom-select__dropdown">
+                                <li class="custom-select__item" data-custom-select-value="months">Месяц (а/ев)</li>
+                                <li class="custom-select__item" data-custom-select-value="years">Год (а) / Лет</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quiz__item">
+            <div class="quiz__item-inner">
+                <div class="quiz__item-group">
+                    <strong class="quiz__item-group-title">Тип животного</strong>
+                    <div class="custom-radio custom-radio--big">
+                        <label class="custom-radio__item">
+                            <input type="radio" name="pet" value="cat">
+                            <img src="public/images/icons/cat.svg" alt="cat">
+                            <span>Кошка</span>
+                        </label>
+                        <label class="custom-radio__item">
+                            <input type="radio" name="pet" value="dog">
+                            <img src="public/images/icons/dog.svg" alt="dog">
+                            <span>Собака</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quiz__item">
+            <div class="quiz__item-inner">
+                <div class="quiz__item-group">
+                    <strong class="quiz__item-group-title">Кастрирован?</strong>
+                    <div class="custom-radio">
+                        <label class="custom-radio__item">
+                            <input type="radio" name="neutered" value="yes">
+                            <img src="public/images/icons/success.svg" alt="success">
+                            <span>Да</span>
+                        </label>
+                        <label class="custom-radio__item">
+                            <input type="radio" name="neutered" value="no">
+                            <img src="public/images/icons/cross.svg" alt="cross">
+                            <span>Нет</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quiz__item">
+            <div class="quiz__item-inner">
+                <div class="quiz__item-group">
+                    <strong class="quiz__item-group-title">Вес питомца</strong>
+                    <div class="custom-input">
+                        <input type="text" name="weight" minlength="1" maxlength="3" placeholder="Укажите вес питомца" required>
+                        <span class="custom-input__after">кг</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quiz__item quiz__item-result">
+            <div class="quiz__item-inner">
+                <div class="cards">
+                    <div class="cards__items">
+                        <div class="cards__item">
+                            <a class="cards__item-image" href="#">
+                                <img src="public/images/preview-product.jpg" alt="">
+                            </a>
+                            <a class="cards__item-title" href="#">Мясное ассорти</a>
+                            <p class="cards__item-excerpt">Сухой корм премиум-класса SIRIUS для взрослых собак</p>
+                            <span class="cards__item-additional">2 кг, 15 кг</span>
+                            <a class="cards__item-btn btn" href="#">Подробнее</a>
+                        </div>
+                        <div class="cards__item">
+                            <a class="cards__item-image" href="#">
+                                <img src="public/images/preview-product.jpg" alt="">
+                            </a>
+                            <a class="cards__item-title" href="#">Мясное ассорти</a>
+                            <p class="cards__item-excerpt">Сухой корм премиум-класса SIRIUS для взрослых собак</p>
+                            <span class="cards__item-additional">2 кг, 15 кг</span>
+                            <a class="cards__item-btn btn" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quiz__btns">
+        <button class="quiz__btn quiz__btn-prev btn">Назад</button>
+        <button class="quiz__btn quiz__btn-next btn">Далее</button>
+        <button class="quiz__btn quiz__submit btn" type="submit">Подобрать корм</button>
+    </div>
+</div>

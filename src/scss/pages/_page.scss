@@ -171,5 +171,14 @@
         &__custom-form {
             max-width: 100%;
         }
+        .section__container {
+            &::after {
+                bottom: -3.5rem;
+                right: -8rem;
+                width: 14.71421rem;
+                height: 11.64284rem;
+                transform: rotate(155deg);
+            }
+        }
     }  
 }
