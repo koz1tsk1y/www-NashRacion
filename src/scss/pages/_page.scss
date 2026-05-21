@@ -124,7 +124,7 @@
         }
         display: flex;
         align-items: flex-end;
-        justify-content: space-between;
+        gap: 11.5rem;
     }
     &__content {
        display: flex; 
@@ -141,6 +141,15 @@
         width: 17.65rem;
         height: 25rem;
         margin-bottom: -4rem;
+    }
+    .section__container {
+        &::after {
+            bottom: -13.5rem;
+            right: -15rem;
+            width: 43.25rem;
+            height: 34.2rem;
+            transform: rotate(150deg);
+        }
     }
 }
 

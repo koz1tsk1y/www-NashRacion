@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    overflow: hidden;
     &__tabs {
         display: flex;
         gap: 1rem;
@@ -25,11 +24,7 @@
             pointer-events: none;
         }
     }
-    &__items {
-        display: flex;
-    }
     &__item {
-        flex: 0 0 100%;
         &-inner {
             display: flex;
             column-gap: 5rem;
