@@ -1,0 +1,137 @@
+.product-detail {
+  &__row {
+    display: flex;
+    gap: 1rem;
+    & > * {
+      flex: 1;
+      min-width: 0;
+    }
+    & + & {
+      margin-top: 1rem;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    margin-bottom: 1rem;
+  }
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+  }
+  &__weight {
+    opacity: 0.7;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__small {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__btns {
+    display: flex;
+    gap: 1rem;
+  }
+  &__btn {
+    flex: 1;
+  }
+  &__shops {
+    .shops__item {
+      gap: 0.5rem;
+      &-image {
+        padding-bottom: 48%;
+      }
+    }
+  }
+  &__highlights {
+    position: relative;
+    padding: 2rem;
+    background: $primaryColor;
+    border-radius: 1rem;
+    overflow: hidden;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      background: url("data:image/svg+xml,%3Csvg width='322' height='314' viewBox='0 0 322 314' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M54.4568 35.0825C37.6067 35.7809 19.9645 48.3414 20.0001 65.2102C20.0136 70.761 21.8764 76.1474 24.259 81.1605C33.0708 99.7098 49.7082 114.081 68.9284 121.164C58.9941 121.774 49.1777 124.385 40.3463 128.973C32.0497 133.287 24.0018 140.312 23.1565 149.629C22.732 154.273 24.1882 158.887 26.0159 163.176C40.1643 196.419 80.1042 216.314 115.141 207.574C101.929 213.701 88.3552 220.083 78.4459 230.768C68.5366 241.453 63.0657 257.607 68.9582 270.936C75.9704 286.778 96.5374 292.766 113.374 288.744C126.346 285.653 137.569 278.119 148.066 269.684C140.915 280.997 143.967 299.679 156.388 306.827C172.551 316.121 195.042 306.449 203.226 289.691C220.117 255.085 190.381 243.104 242.248 247.349C268.008 249.456 319.09 241.832 341.617 252.572C297.951 231.766 252.327 215.051 205.557 202.742C219.14 195.177 233.077 187.316 242.791 175.171C252.509 163.034 257.078 145.421 249.783 131.682C239.517 112.34 212.926 110.014 191.179 112.451C215.601 89.8554 222.284 50.3021 206.638 20.9238C199.541 7.6059 186.256 -4.32863 171.247 -2.88053C156.854 -1.48721 146.456 18.2507 155.774 28.4667C144.533 17.6896 129.192 9.22917 114.215 13.0178C98.6494 16.9442 89.5383 40.0271 102.275 49.8212C87.2221 42.1995 71.3244 34.3759 54.4656 35.0784L54.4568 35.0825Z' fill='white' /%3E%3C/svg%3E") no-repeat center / contain;
+      pointer-events: none;
+    }
+    &::before {
+      bottom: -2.5rem;
+      left: -4.05rem;
+      width: 11.7rem;
+      height: 9.25rem;
+      transform: rotate(124deg);
+    }
+    &::after {
+      top: -2.1rem;
+      right: -7.7rem;
+      width: 16.1rem;
+      height: 15.7rem;
+    }
+    .highlights__items {
+      position: relative;
+      z-index: 2;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .highlights__item {
+      &-icon {
+        width: 6rem;
+        height: 4rem;
+      }
+      &-title {
+        font-size: 1.6rem;
+        text-transform: none;
+      }
+    }
+  }
+  &__about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+    &-title {
+      font-size: 2rem;
+    }
+    &-label {
+      width: fit-content;
+      padding: 0.5rem 2rem;
+      background: #E8EBCD;
+      border-radius: 0.5rem;
+      color: $secondaryColor;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    &-small {
+      font-size: 0.8rem;
+      line-height: 120%;
+    }
+  }
+  &__custom-form {
+    width: 100%;
+    .custom-form__input {
+      opacity: 0.6;
+    }
+    .custom-form__submit {
+      margin-top: 1rem;
+    }
+    .custom-form__text {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  }
+}

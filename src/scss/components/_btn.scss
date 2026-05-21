@@ -24,6 +24,15 @@
             border-color: #fff;
             color: $secondaryColor;
         }
+        &-color {
+            @extend .btn--empty;
+            border-color: $secondaryColor;
+            color: $secondaryColor;
+            &:hover {
+                border-color: $primaryColor;
+                color: $primaryColor;
+            }
+        }
     }
 
     &--white {
@@ -37,6 +46,12 @@
             color: #fff;
         }
     }
+
+    &--small {
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.5rem;
+        font-size: 0.8rem;
+    }
 }
 
 
@@ -49,6 +64,12 @@
         
         &--empty {
             border: 0.07rem solid #fff;
+        }
+
+        &--small {
+            padding: 0.71428rem 1.4285rem;
+            border-radius: 0.71428rem;
+            font-size: 1rem;
         }
     }
 }

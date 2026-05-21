@@ -41,6 +41,38 @@
         font-size: 0.8rem;
         color: #fff;
     }
+
+    &--color {
+        .custom-form {
+            &__input {
+                border-color: $secondaryColor;
+                color: $secondaryColor;
+                &::-webkit-input-placeholder {
+                    color:    $secondaryColor;
+                }
+                &:-moz-placeholder {
+                    color:    $secondaryColor;
+                    opacity:  1;
+                }
+                &::-moz-placeholder {
+                    color:    $secondaryColor;
+                    opacity:  1;
+                }
+                &:-ms-input-placeholder {
+                    color:    $secondaryColor;
+                }
+                &::-ms-input-placeholder {
+                    color:    $secondaryColor;
+                }
+                &::placeholder {
+                    color:    $secondaryColor;
+                }
+            }
+            &__text {
+                color: $secondaryColor;
+            }
+        }
+    }
 }
 
 

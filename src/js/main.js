@@ -7,6 +7,7 @@ import { cardsInit } from './_cards.js';
 import { customNumberInit } from './_custom-number.js';
 import { customSelectInit } from './_custom-select.js';
 import { quizInit } from './_quiz.js';
+import { previewSliderInit } from './_preview-slider.js';
 
 document.addEventListener( 'DOMContentLoaded', function() {
   headerInit();
@@ -15,4 +16,5 @@ document.addEventListener( 'DOMContentLoaded', function() {
   customNumberInit();
   customSelectInit();
   quizInit();
+  previewSliderInit();
 })
