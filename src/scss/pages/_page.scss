@@ -160,6 +160,25 @@
         .get-section__image {
             width: 27.65rem;
             margin-bottom: -2rem;
+            transform: scale(1.4);
+        }
+    }
+
+    &--stretch {
+        .section__container {
+            align-items: center;
+            gap: 4rem;
+        }
+        .get-section__custom-form {
+            max-width: 100%;
+            .custom-form__text {
+                font-size: 1rem;
+            }
+        }
+        .get-section__image {
+            width: 27.65rem;
+            margin-bottom: 0;
+            transform: scale(1.5);
         }
     }
 }

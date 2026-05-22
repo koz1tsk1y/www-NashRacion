@@ -1,0 +1,48 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    &__item {
+        @extend %flex-center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 0.05rem solid transparent;
+        font-family: 'Intro Head R Base', sans-serif;
+        font-size: 1.2rem;
+        color: $secondaryColor;
+        transition: 0.2s all;
+        &:not(&--current) {
+            opacity: 0.5;
+        }
+    }
+    a.pagination__item {
+        &:hover {
+            border-color: rgba($secondaryColor, 0.2);
+            opacity: 0.8;
+        }
+    }
+    &__arrow {
+        width: 0.65rem;
+        height: 1.2rem;
+        background: url("data:image/svg+xml,%3Csvg width='13' height='24' viewBox='0 0 13 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 22.0386L11.0666 24L0.535657 13.3101C0.365904 13.1388 0.231186 12.9351 0.139256 12.7108C0.0473263 12.4864 -5.3528e-07 12.2458 -5.24658e-07 12.0028C-5.14036e-07 11.7598 0.0473263 11.5192 0.139256 11.2948C0.231186 11.0704 0.365904 10.8667 0.535657 10.6955L11.0666 0L12.9982 1.96145L3.11417 12L13 22.0386Z' fill='%23144534' /%3E%3C/svg%3E") no-repeat center / contain;
+        &-next {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        gap: 0;
+        &__item {
+            width: 3.5714rem;
+            height: 3.21428rem;
+            border-width: 0.07142rem;
+            font-size: 1.4285rem;
+        }
+        &__arrow {
+            width: 0.85714rem;
+            height: 1.5rem;
+        }
+    }
+}

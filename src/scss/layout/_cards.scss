@@ -29,6 +29,21 @@
             margin-left: -0.6rem;
         }
     }
+    &__links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    &__link {
+        background: transparent;
+        border-color: $primaryColor;
+        color: $primaryColor;
+        &:hover {
+            background: $primaryColor;
+            border-color: $primaryColor;
+            color: #fff;
+        }
+    }
     &__items {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -133,10 +148,17 @@
         margin: 0 auto;
         margin-top: 1rem;
     }
+    &__pagination {
+        margin: 0 auto;
+        &:not(:first-child) {
+            margin-top: 1.5rem;
+        }
+    }
 
     &--blog {
         .cards__items {
             grid-template-columns: repeat(3, 1fr);
+            row-gap: 2rem;
         }
         .cards__item {
             &-image {
@@ -190,6 +212,14 @@
             border-radius: 0.7143rem;
             font-size: 1.14283rem;
         }
+        &__links {
+            gap: 1.07142rem;
+        }
+        &__link {
+            padding: 0.7142rem 1.4285rem;
+            border-radius: 0.7142rem;
+            font-size: 0.8571rem;
+        }
         &__items {
             gap: 1.07141rem;
         }
@@ -233,6 +263,11 @@
         &__btn {
             width: 100%;
             margin-top: 0.7rem;
+        }
+        &__pagination {
+            &:not(:first-child) {
+                margin-top: 0.5rem;
+            }
         }
 
         &--blog {

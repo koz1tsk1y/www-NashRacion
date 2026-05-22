@@ -37,6 +37,7 @@ export default defineConfig({
         product: resolve(root, 'product-detail.html'),
         faq: resolve(root, 'faq.html'),
         where_buy: resolve(root, 'where-buy.html'),
+        blog: resolve(root, 'blog.html'),
       },
       output: {
         entryFileNames: `js/main.js`,
