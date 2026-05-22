@@ -9,6 +9,7 @@
   }
   &__preview {
     position: relative;
+    flex-shrink: 0;
     width: 7.35rem;
     padding-bottom: 89.12%;
     border: 0.05rem solid rgba($secondaryColor, 30%);

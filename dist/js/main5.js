@@ -227,6 +227,87 @@ function quizInit() {
 	init();
 }
 //#endregion
+//#region src/js/_preview-slider.js
+function previewSliderInit() {
+	const slider = document.querySelector(".preview-slider");
+	if (!slider) return;
+	const previews = slider.querySelectorAll(".preview-slider__preview");
+	const mainSlides = slider.querySelectorAll(".preview-slider__main-image");
+	const main = slider.querySelector(".preview-slider__main");
+	let currentIndex = 0;
+	function setActive(index) {
+		currentIndex = index;
+		previews.forEach((p) => p.classList.remove("preview-slider__preview--active"));
+		previews[index].classList.add("preview-slider__preview--active");
+		mainSlides.forEach((div) => div.classList.remove("preview-slider__main-image--active"));
+		mainSlides[index].classList.add("preview-slider__main-image--active");
+	}
+	previews.forEach((preview, index) => {
+		preview.addEventListener("click", () => setActive(index));
+	});
+	let startX = 0;
+	let isDown = false;
+	main.addEventListener("touchstart", (e) => {
+		isDown = true;
+		startX = e.touches[0].clientX;
+	}, { passive: true });
+	main.addEventListener("touchend", (e) => {
+		if (!isDown) return;
+		isDown = false;
+		handleSwipe(e.changedTouches[0].clientX - startX);
+	});
+	main.addEventListener("mousedown", (e) => {
+		isDown = true;
+		startX = e.clientX;
+	});
+	main.addEventListener("mouseup", (e) => {
+		if (!isDown) return;
+		isDown = false;
+		handleSwipe(e.clientX - startX);
+	});
+	function handleSwipe(diff) {
+		if (Math.abs(diff) > 50) {
+			if (diff < 0) currentIndex = (currentIndex + 1) % previews.length;
+			else currentIndex = (currentIndex - 1 + previews.length) % previews.length;
+			setActive(currentIndex);
+		}
+	}
+	setActive(0);
+}
+//#endregion
+//#region src/js/_faq.js
+function faqInit() {
+	const items = document.querySelectorAll(".faq__item");
+	items.forEach((item) => {
+		const question = item.querySelector(".faq__item-question");
+		const answer = item.querySelector(".faq__item-answer");
+		const inner = item.querySelector(".faq__item-answer-inner");
+		question.addEventListener("click", () => {
+			const isOpen = item.classList.contains("faq__item--active");
+			items.forEach((i) => {
+				i.classList.remove("faq__item--active");
+				i.querySelector(".faq__item-answer").style.maxHeight = "0px";
+			});
+			if (!isOpen) {
+				item.classList.add("faq__item--active");
+				answer.style.maxHeight = inner.scrollHeight + "px";
+				scrollToQuestion(question);
+			}
+		});
+		window.addEventListener("resize", () => {
+			if (item.classList.contains("faq__item--active")) answer.style.maxHeight = inner.scrollHeight + "px";
+		});
+	});
+	function scrollToQuestion(questionEl) {
+		const rect = questionEl.getBoundingClientRect();
+		const offset = rect.top + window.scrollY - window.innerHeight / 2 + rect.height / 2;
+		window.scrollTo({
+			top: offset,
+			behavior: "smooth"
+		});
+	}
+}
+//#endregion
 //#region src/js/main.js
 document.addEventListener("DOMContentLoaded", function() {
 	headerInit();
@@ -235,5 +316,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	customNumberInit();
 	customSelectInit();
 	quizInit();
+	previewSliderInit();
+	faqInit();
 });
 //#endregion

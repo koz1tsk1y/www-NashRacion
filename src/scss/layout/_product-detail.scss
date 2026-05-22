@@ -135,3 +135,123 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+  .product-detail {
+    &__row {
+      flex-direction: column;
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .product-detail {
+    &__row {
+      gap: 1.5714rem;
+      & > * {
+        flex: auto;
+      }
+      & + & {
+        margin-top: 3.5714rem;
+      }
+    }
+    &__content {
+    }
+    &__title {
+      margin-bottom: 1.07142rem;
+    }
+    &__text {
+      &:not(:last-child) {
+        margin-bottom: 0.71428rem;
+      }
+    }
+    &__weight {
+      font-size: 0.8571rem;
+      &:not(:last-child) {
+        margin-bottom: 0.714285rem;
+      }
+    }
+    &__small {
+      font-size: 0.8571rem;
+      &:not(:last-child) {
+        margin-bottom: 1.42857rem;
+      }
+    }
+    &__btns {
+      flex-direction: column;
+      gap: 1.07142rem;
+    }
+    &__btn {
+      width: 100%;
+    }
+    &__shops {
+      .shops__item {
+        gap: 1.0714rem;
+        &-image {
+          padding-bottom: 52.5%;
+        }
+      }
+    }
+    &__highlights {
+      padding: 2.85714rem 1rem;
+      border-radius: 0.75rem;
+      &::before {
+        bottom: -2rem;
+        left: -9.05rem;
+        width: 18.35714rem;
+        height: 14.5rem;
+        transform: rotate(-163deg);
+      }
+      &::after {
+        right: -7rem;
+        width: 15.6428rem;
+        height: 12.35714rem;
+      }
+      .highlights__items {
+        grid-template-columns: 1fr;
+        gap: 2.1428rem;
+      }
+      .highlights__item {
+        &-icon {
+          width: 8.5714rem;
+          height: 5.71428rem;
+        }
+        &-title {
+          font-size: 2.28571rem;
+        }
+      }
+    }
+    &__about {
+      gap: 1.0714rem;
+      &:not(:first-child) {
+        margin-top: 3.5714rem;
+      }
+      &-title {
+        font-size: 2.28571rem;
+      }
+      &-label {
+        padding: 0.71428rem 1.82142rem;
+        border-radius: 0.71428rem;
+        font-size: 1.14285rem;
+      }
+      &-text {
+        gap: 1.07142rem;
+        font-size: 1.14285rem;
+      }
+      &-small {
+        font-size: 0.8571rem;
+      }
+    }
+    &__custom-form {
+      .custom-form__submit {
+        margin-top: 1.07142rem;
+      }
+      .custom-form__text {
+        margin-top: 1.07142rem;
+        font-size: 1.14285rem;
+      }
+    }
+  }
+}

@@ -64,6 +64,15 @@
         
         &--empty {
             border: 0.07rem solid #fff;
+            &-color {
+            @extend .btn--empty;
+                border-color: $secondaryColor;
+                color: $secondaryColor;
+                &:hover {
+                    border-color: $primaryColor;
+                    color: $primaryColor;
+                }
+            }
         }
 
         &--small {

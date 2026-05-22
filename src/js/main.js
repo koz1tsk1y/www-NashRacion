@@ -8,6 +8,7 @@ import { customNumberInit } from './_custom-number.js';
 import { customSelectInit } from './_custom-select.js';
 import { quizInit } from './_quiz.js';
 import { previewSliderInit } from './_preview-slider.js';
+import { faqInit } from './_faq.js';
 
 document.addEventListener( 'DOMContentLoaded', function() {
   headerInit();
@@ -17,4 +18,5 @@ document.addEventListener( 'DOMContentLoaded', function() {
   customSelectInit();
   quizInit();
   previewSliderInit();
+  faqInit();
 })
