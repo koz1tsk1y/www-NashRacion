@@ -1,0 +1,115 @@
+<load ="src/html/layout/header-static.html"/>
+
+<main class="main page">
+
+    <load ="src/html/layout/breadcrumbs.html"/>
+
+    <section class="section">
+        <div class="section__container container">
+            <h1 class="section__title title">Где купить</h1>
+            <div class="section__text section__text--limited">
+                <p>«Корм «Наш Рацион» можно купить в большинстве сетевых магазинов и зоомагазинов России. Выберите удобный способ».</p>
+            </div>
+            <div class="section__item section__item--mt shops">
+                <div class="shops__text">
+                    <p><b>Маркетплейсы</b></p>    
+                </div>
+                <div class="shops__items">
+                    <div class="shops__item">
+                        <a class="shops__item-image" href="#" target="_blank">
+                            <img src="public/images/logos/ozon-logo.svg" alt="">
+                        </a>
+                        <a class="shops__item-btn btn" href="#">Купить сейчас</a>
+                    </div>
+                    <div class="shops__item">
+                        <a class="shops__item-image" href="#" target="_blank">
+                            <img src="public/images/logos/wb-logo.svg" alt="">
+                        </a>
+                        <a class="shops__item-btn btn" href="#">Купить сейчас</a>
+                    </div>
+                    <div class="shops__item">
+                        <a class="shops__item-image" href="#" target="_blank">
+                            <img src="public/images/logos/ya_market-logo.svg" alt="">
+                        </a>
+                        <a class="shops__item-btn btn" href="#">Купить сейчас</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section__item section__item--mt shops shops--small">
+                <div class="shops__text">
+                    <p><b>Интернет-магазины</b></p>    
+                </div>
+                <div class="shops__items">
+                    <div class="shops__item">
+                        <a class="shops__item-image" href="#" target="_blank">
+                            <img src="public/images/logos/ozon-logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="shops__item">
+                        <a class="shops__item-image" href="#" target="_blank">
+                            <img src="public/images/logos/ozon-logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="shops__item">
+                        <a class="shops__item-image" href="#" target="_blank">
+                            <img src="public/images/logos/ozon-logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="shops__item">
+                        <a class="shops__item-image" href="#" target="_blank">
+                            <img src="public/images/logos/ozon-logo.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section__item section__item--mt map-control">
+            <div class="container">
+                <div class="map-control__text">
+                    <p><b>Офлайн</b></p>
+                </div>
+                <div class="map-control__select custom-select">
+                    <input type="hidden" name="type-age">
+                    <span class="custom-select__label"></span>
+                    <ul class="custom-select__dropdown">
+                        <li class="custom-select__item">Абхазская Автономная Республика</li>
+                        <li class="custom-select__item">2</li>
+                        <li class="custom-select__item">3</li>
+                        <li class="custom-select__item">4</li>
+                        <li class="custom-select__item">5</li>
+                        <li class="custom-select__item">6</li>
+                        <li class="custom-select__item">7</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map-control__map">
+                <div style="position:relative;overflow:hidden;"><a href="https://yandex.by/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a><a href="https://yandex.by/maps/geo/moskva/53000094/?ll=37.385272%2C55.584227&utm_medium=mapframe&utm_source=maps&z=9.54" style="color:#eee;font-size:12px;position:absolute;top:14px;">Москва — Яндекс Карты</a><iframe src="https://yandex.by/map-widget/v1/?ll=37.385272%2C55.584227&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzAwMDA5NBIa0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAiCg2GeBZCFQEGX0I%2C&z=9.54" width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-section get-section--center section section--beautiful section--margin-not">
+        <div class="get-section__container section__container container">
+            <div class="get-section__content section__inner">
+                <h2 class="get-section__title section__title title">Не нашли в своём городе?</h2>
+                <form class="get-section__custom-form custom-form">
+                    <div class="custom-form__inputs">
+                        <input class="custom-form__input" type="text" required placeholder="Город">
+                        <input class="custom-form__input" type="text" required placeholder="Название магазина">
+                    </div>
+                    <button class="custom-form__submit btn" type="submit">Отправить форму</button>
+                </form>
+            </div>
+            <div class="get-section__image double-image double-image--perspective">
+                <img src="public/images/feedback.png" alt="">
+                <img src="public/images/feedback.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- /get-section -->
+
+</main>
+<!-- /main -->
+
+
+<load ="src/html/layout/footer.html"/>

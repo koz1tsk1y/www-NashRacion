@@ -32,6 +32,12 @@
             width: 100%;
         }
     }
+
+    &--small {
+        .shops__items {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
 }
 
 
@@ -48,6 +54,12 @@
                 &:last-child:nth-child(odd) {
                     transform: translateX(calc(50% + 0.6rem));
                 }
+            }
+        }
+
+        &--small {
+            .shops__items {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     }    
@@ -73,6 +85,12 @@
                 padding-bottom: 52.5%;
                 border-width: 0.07144rem;
                 border-radius: 1.42859rem;
+            }
+        }
+
+        &--small {
+            .shops__items {
+                grid-template-columns: 1fr;
             }
         }
     }   
