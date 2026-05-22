@@ -1,0 +1,163 @@
+.map-card {
+    position: relative;
+    padding: 2.15rem 0;
+    &__map {
+        @extend %absolute-fullsize;
+        width: 100%;
+        // height: ;
+        filter: brightness(0.8);
+        > div, iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__card {
+        position: relative;
+        z-index: 2;
+        margin-left: auto;
+        width: 26.9rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: 0.05rem solid rgba(177, 189, 87, 0.3);
+        border-radius: 1.25rem;
+        &-row {
+            display: flex;
+            gap: 1rem;
+        }
+        &-main {
+            flex: 0 0 11rem;
+            @extend %flex-column;
+            gap: 0.75rem;
+        }
+        &-title {
+            font-size: 2.4rem;
+            color: $primaryColor;
+        }
+        &-group {
+            @extend %flex-column;
+            gap: 0.5rem;
+            &-title {
+                font-size: 0.9rem;
+                font-weight: 400;
+                line-height: 125%;
+                text-transform: uppercase;
+            }
+            &-text {
+                font-size: 0.8rem;
+                font-weight: 300;
+                line-height: 120%;
+            }
+        }
+        &-contacts {
+            @extend %flex-column;
+            gap: 0.75rem;
+        }
+        &-contact {
+            font-size: 0.9rem;
+            font-weight: 400;
+            line-height: 1;
+        }
+        &-prod {
+            background: #EFF2DD;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            &-content {
+                padding: 1rem 0.75rem 0.75rem;
+            }
+        }
+        &-image {
+            @extend %proportional-media;
+            padding-bottom: 62.61%;
+            border-radius: 0.75rem;
+            overflow: hidden;
+        }
+        &-small {
+            @extend %flex-column;
+            gap: 0.75rem;
+            font-size: 0.7rem;
+            line-height: 120%;
+            font-weight: 300;
+        }
+        &-btn {
+            margin-top: 0.9rem;
+            width: 100%;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .map-card {
+        padding: 0;
+        &__map {
+            position: static;
+            height: 20rem;
+        }
+        &__card {
+            margin: -5rem auto 5rem;
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .map-card {
+        &__map {
+            height: 30.5714rem;
+        }
+        &__card {
+            width: 100%;
+            padding: 1.42857rem;
+            border-width: 0.07142rem;
+            border-radius: 1.42857rem;
+            overflow: hidden;
+            &-row {
+                flex-direction: column;
+                gap: 2.1428rem;
+            }
+            &-main {
+                flex: auto;
+                gap: 0.71428rem;
+            }
+            &-title {
+                font-size: 2.28571rem;
+            }
+            &-group {
+                gap: 0.71428rem;
+                &-title {
+                    font-size: 1.14285rem;
+                }
+                &-text {
+                    font-size: 1rem;
+                }
+            }
+            &-contacts {
+                gap: 1.28571rem;
+            }
+            &-contact {
+                font-size: 1.1428rem;
+            }
+            &-prod {
+                width: calc(100% + 1.42857rem + 1.42857rem);
+                transform: translateX(-1.42857rem);
+                border-radius: 1.4285rem;
+                &-content {
+                    padding: 1.07142rem 1.42857rem 7rem;
+                }
+            }
+            &-image {
+                border-radius: 1.42857rem;
+            }
+            &-small {
+                gap: 0.71428rem;
+                font-size: 0.71428rem;
+            }
+            &-btn {
+                position: relative;
+                z-index: 2;
+                margin-top: -5rem;
+                font-size: 1.14285rem;
+            }
+        }
+    }
+}

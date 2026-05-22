@@ -6,23 +6,23 @@
      object-fit: contain;
 }
 
-.hero-section__banner img, .article__image img {
+.hero-section__banner img, .article__image img, .map-card__card-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.article__image {
+.article__image, .map-card__card-image {
   position: relative;
 }
-.article__image img {
+.article__image img, .map-card__card-image img {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.article__content, .article__navigation-list, .article, .footer__contacts, .footer__nav-list, .footer__column {
+.article__content, .article__navigation-list, .article, .footer__contacts, .footer__nav-list, .footer__column, .map-card__card-small, .map-card__card-contacts, .map-card__card-group, .map-card__card-main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -41,7 +41,7 @@
   transform: translate(-50%, -50%);
 }
 
-.hero-section__banner, .footer__callout-bg, .preview-slider__main-image {
+.hero-section__banner, .footer__callout-bg, .map-card__map, .preview-slider__main-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -460,6 +460,10 @@ th {
   font-weight: bold;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 img, video {
   max-width: 100%;
 }
@@ -671,6 +675,10 @@ html, body {
 .socials__item:hover {
   background: rgb(133, 143.2307692308, 56.2692307692);
 }
+.socials--small .socials__item {
+  width: 2rem;
+  height: 2rem;
+}
 
 @media (max-width: 480px) {
   .socials {
@@ -684,6 +692,10 @@ html, body {
   .socials__item img {
     width: 55%;
     height: 55%;
+  }
+  .socials--small .socials__item {
+    width: 2.8571rem;
+    height: 2.8571rem;
   }
 }
 .up-btn {
@@ -1362,6 +1374,158 @@ html, body {
   }
   .faq__item-answer-inner {
     padding: 0 1.07142rem 1.07142rem;
+  }
+}
+.map-card {
+  position: relative;
+  padding: 2.15rem 0;
+}
+.map-card__map {
+  width: 100%;
+  filter: brightness(0.8);
+}
+.map-card__map > div, .map-card__map iframe {
+  width: 100%;
+  height: 100%;
+}
+.map-card__card {
+  position: relative;
+  z-index: 2;
+  margin-left: auto;
+  width: 26.9rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: 0.05rem solid rgba(177, 189, 87, 0.3);
+  border-radius: 1.25rem;
+}
+.map-card__card-row {
+  display: flex;
+  gap: 1rem;
+}
+.map-card__card-main {
+  flex: 0 0 11rem;
+  gap: 0.75rem;
+}
+.map-card__card-title {
+  font-size: 2.4rem;
+  color: #B1BD57;
+}
+.map-card__card-group {
+  gap: 0.5rem;
+}
+.map-card__card-group-title {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+.map-card__card-group-text {
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 120%;
+}
+.map-card__card-contacts {
+  gap: 0.75rem;
+}
+.map-card__card-contact {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1;
+}
+.map-card__card-prod {
+  background: #EFF2DD;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.map-card__card-prod-content {
+  padding: 1rem 0.75rem 0.75rem;
+}
+.map-card__card-image {
+  padding-bottom: 62.61%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.map-card__card-small {
+  gap: 0.75rem;
+  font-size: 0.7rem;
+  line-height: 120%;
+  font-weight: 300;
+}
+.map-card__card-btn {
+  margin-top: 0.9rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .map-card {
+    padding: 0;
+  }
+  .map-card__map {
+    position: static;
+    height: 20rem;
+  }
+  .map-card__card {
+    margin: -5rem auto 5rem;
+  }
+}
+@media (max-width: 480px) {
+  .map-card__map {
+    height: 30.5714rem;
+  }
+  .map-card__card {
+    width: 100%;
+    padding: 1.42857rem;
+    border-width: 0.07142rem;
+    border-radius: 1.42857rem;
+    overflow: hidden;
+  }
+  .map-card__card-row {
+    flex-direction: column;
+    gap: 2.1428rem;
+  }
+  .map-card__card-main {
+    flex: auto;
+    gap: 0.71428rem;
+  }
+  .map-card__card-title {
+    font-size: 2.28571rem;
+  }
+  .map-card__card-group {
+    gap: 0.71428rem;
+  }
+  .map-card__card-group-title {
+    font-size: 1.14285rem;
+  }
+  .map-card__card-group-text {
+    font-size: 1rem;
+  }
+  .map-card__card-contacts {
+    gap: 1.28571rem;
+  }
+  .map-card__card-contact {
+    font-size: 1.1428rem;
+  }
+  .map-card__card-prod {
+    width: calc(100% + 1.42857rem + 1.42857rem);
+    transform: translateX(-1.42857rem);
+    border-radius: 1.4285rem;
+  }
+  .map-card__card-prod-content {
+    padding: 1.07142rem 1.42857rem 7rem;
+  }
+  .map-card__card-image {
+    border-radius: 1.42857rem;
+  }
+  .map-card__card-small {
+    gap: 0.71428rem;
+    font-size: 0.71428rem;
+  }
+  .map-card__card-btn {
+    position: relative;
+    z-index: 2;
+    margin-top: -5rem;
+    font-size: 1.14285rem;
   }
 }
 .wrapper {

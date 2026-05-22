@@ -37,7 +37,7 @@
     border: 0.05rem solid rgba($secondaryColor, 30%);
     border-radius: 0.75rem;
     &-image {
-      @extend %absolute-fullzise;
+      @extend %absolute-fullsize;
       transition: 0.3s all;
       &:not(&--active) {
         opacity: 0;

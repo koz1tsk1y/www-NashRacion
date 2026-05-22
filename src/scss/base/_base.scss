@@ -1,6 +1,12 @@
+html, body {
+  scroll-behavior: smooth;
+}
+
 img, video {
   max-width: 100%;
 }
+
+
 
 // .main, .footer {
 //   transition: 0.4s filter;

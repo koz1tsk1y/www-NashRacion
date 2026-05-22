@@ -39,6 +39,7 @@ export default defineConfig({
         where_buy: resolve(root, 'where-buy.html'),
         blog: resolve(root, 'blog.html'),
         article: resolve(root, 'article.html'),
+        contacts: resolve(root, 'contacts.html'),
       },
       output: {
         entryFileNames: `js/main.js`,

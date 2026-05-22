@@ -18,6 +18,13 @@
             background: $darkenPrimaryColor;
         }
     }
+
+    &--small {
+        .socials__item {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
 }
 
 
@@ -32,6 +39,13 @@
             img {
                 width: 55%;
                 height: 55%;
+            }
+        }
+
+        &--small {
+            .socials__item {
+                width: 2.8571rem;
+                height: 2.8571rem;
             }
         }
     }

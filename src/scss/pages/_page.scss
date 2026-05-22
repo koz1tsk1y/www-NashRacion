@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     &__banner {
-        @extend %absolute-fullzise;
+        @extend %absolute-fullsize;
         filter: brightness(0.8);
         img {
             @extend %cover-media;

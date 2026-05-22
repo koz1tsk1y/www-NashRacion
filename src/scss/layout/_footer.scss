@@ -7,7 +7,7 @@
         padding-bottom: 3rem;
     }
     &__callout-bg {
-        @extend %absolute-fullzise;
+        @extend %absolute-fullsize;
         pointer-events: none;
         &-item {
             position: absolute;
