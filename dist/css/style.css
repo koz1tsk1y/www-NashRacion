@@ -2993,6 +2993,9 @@ html, body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.content-media--big .content-media__media {
+  flex: 0 0 32.5rem;
+}
 
 @media (max-width: 768px) {
   .content-media {
@@ -3018,6 +3021,9 @@ html, body {
     gap: 0;
   }
   .content-media--bg .content-media__media {
+    flex: auto;
+  }
+  .content-media--big .content-media__media {
     flex: auto;
   }
 }
@@ -3145,14 +3151,80 @@ html, body {
     line-height: 125%;
   }
 }
+.beautiful-block {
+  position: relative;
+  padding: 2.5rem 1.5rem;
+  background: #B1BD57;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.beautiful-block::before, .beautiful-block::after {
+  content: "";
+  position: absolute;
+  width: 23.2rem;
+  height: 18.35rem;
+  background: url("data:image/svg+xml,%3Csvg width='464' height='367' viewBox='0 0 464 367' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M4.40792 240.496C-5.01586 262.862 0.518531 293.534 22.5027 303.832C29.7378 307.219 37.893 308.097 45.8809 308.069C75.4348 307.971 104.347 295.123 125.356 274.443C120.058 287.751 117.438 302.132 117.995 316.444C118.525 329.892 122.735 344.677 134.347 351.491C140.133 354.892 147.033 355.825 153.739 356.076C205.695 358.041 256.09 318.242 266.197 267.266C266.071 288.225 266.057 309.811 273.892 329.264C281.726 348.718 299.403 365.747 320.37 366.249C345.295 366.834 365.704 343.729 370.792 319.342C374.724 300.558 371.796 281.327 367.252 262.486C377.595 278.735 403.79 286.218 420.713 274.429C442.725 259.086 443.924 223.871 427.126 202.94C392.428 159.727 358.594 191.095 395.927 126.171C414.468 93.9242 435.867 22.7424 463.664 -9.89906e-05C409.798 44.0914 360.058 93.2413 315.351 146.586C313.831 124.261 312.145 101.296 302.289 81.2012C292.447 61.1064 272.317 44.3561 249.956 45.4291C218.478 46.9342 199.143 80.1282 188.98 109.936C174.538 64.2837 127.14 31.3266 79.2964 33.6816C57.6049 34.7547 33.92 44.7324 26.6012 65.1616C19.5892 84.7547 38.9107 110.396 57.9256 104.529C37.0009 112.556 16.578 127.341 12.3261 149.164C7.89305 171.837 32.3586 197.854 52.9209 187.277C33.7666 202.202 13.8317 218.102 4.40792 240.482L4.40792 240.496Z' fill='white' /%3E%3C/svg%3E") no-repeat center/contain;
+  pointer-events: none;
+}
+.beautiful-block::before {
+  top: -8.55rem;
+  left: -6.35rem;
+}
+.beautiful-block::after {
+  right: -8.25rem;
+  bottom: -5rem;
+  transform: rotate(90deg);
+}
+.beautiful-block__inner {
+  position: relative;
+  z-index: 2;
+}
+.beautiful-block__title {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .beautiful-block {
+    padding: 2.1428rem 0.57142rem 2.1428rem 1.42857rem;
+    border-radius: 1.4285rem;
+  }
+  .beautiful-block::before, .beautiful-block::after {
+    width: 15.4285rem;
+    height: 12.21428rem;
+  }
+  .beautiful-block::before {
+    top: -10rem;
+    left: -2.35rem;
+    transform: rotate(-74deg);
+  }
+  .beautiful-block::after {
+    right: -6.25rem;
+    bottom: -5rem;
+    transform: rotate(120deg);
+  }
+}
 .hero-section {
   position: relative;
   min-height: 45rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .hero-section__banner {
   filter: brightness(0.8);
+}
+.hero-section__breadcrumbs {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-top: 7.05rem;
+}
+.hero-section__breadcrumbs .breadcrumbs__item {
+  color: #fff;
+}
+.hero-section__breadcrumbs + .hero-section__container {
+  padding-top: 5.25rem;
 }
 .hero-section__container {
   position: relative;
@@ -3184,10 +3256,22 @@ html, body {
 .hero-section__btns:not(:first-child) {
   margin-top: 1.5rem;
 }
+.hero-section--long .hero-section__content {
+  max-width: 51.75rem;
+}
+.hero-section--long .hero-section__banner {
+  filter: brightness(0.6);
+}
 
 @media (max-width: 480px) {
   .hero-section {
     min-height: 41.714rem;
+  }
+  .hero-section__breadcrumbs {
+    padding-top: 7.1428rem;
+  }
+  .hero-section__breadcrumbs + .hero-section__container {
+    padding-top: 3.57142rem;
   }
   .hero-section__container {
     padding-top: 11.6428rem;
@@ -3212,6 +3296,22 @@ html, body {
   .hero-section__btns:not(:first-child) {
     margin-top: 1.4259rem;
   }
+  .hero-section--long .hero-section__container {
+    padding-bottom: 6.9285rem;
+  }
+  .hero-section--long .hero-section__content {
+    max-width: 100%;
+  }
+}
+.shops-section__breadcrumbs {
+  width: 100%;
+  padding-top: 7.05rem;
+}
+.shops-section__breadcrumbs .breadcrumbs__item {
+  color: #fff;
+}
+.shops-section__breadcrumbs + .shops-section__container {
+  padding-top: 5.25rem;
 }
 .shops-section__container {
   position: relative;

@@ -41,6 +41,7 @@ export default defineConfig({
         article: resolve(root, 'article.html'),
         contacts: resolve(root, 'contacts.html'),
         about: resolve(root, 'about.html'),
+        about_prod: resolve(root, 'about-prod.html'),
       },
       output: {
         entryFileNames: `js/main.js`,

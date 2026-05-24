@@ -44,6 +44,12 @@
       }
     }
   }
+
+  &--big {
+    .content-media__media {
+      flex: 0 0 32.5rem;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -68,6 +74,12 @@
     &--bg {
       flex-direction: column-reverse;
       gap: 0;
+      .content-media__media {
+        flex: auto;
+      }
+    }
+
+    &--big {
       .content-media__media {
         flex: auto;
       }
