@@ -123,6 +123,41 @@
     </div>
     <!-- /wrapper -->
 
+    <div class="feedback-popup">
+        <div class="feedback-popup__body">
+            <button class="feedback-popup__close"></button>
+            <form class="feedback-popup__form custom-form">
+                <div class="custom-form__inputs">
+                    <input class="custom-form__input" type="text" name="fullname" required placeholder="ФИО">
+                    <input class="custom-form__input" type="text" name="region" required placeholder="Регион">
+                    <input class="custom-form__input" type="Email" name="email" required placeholder="Электронная почта">
+                    <input class="custom-form__input" type="tel" name="phone" required placeholder="Телефон">
+                    <textarea class="custom-form__input" name="message" placeholder="Комментарий" rows="5"></textarea>
+                    <div class="custom-radio">
+                        <label class="custom-radio__item">
+                            <input type="radio" name="feedback-type" value="email">
+                            <img src="public/images/icons/email-icon.svg" alt="email">
+                            <span>Электронная почта</span>
+                        </label>
+                        <label class="custom-radio__item">
+                            <input type="radio" name="feedback-type" value="phone">
+                            <img src="public/images/icons/phone-icon.svg" alt="phone">
+                            <span>Телефон</span>
+                        </label>
+                    </div>
+                    <div class="custom-upload">
+                        <span class="custom-upload__title">Выберите файл:</span>
+                        <span class="custom-upload__btn btn"></span>
+                        <span class="custom-upload__label"></span>
+                        <input type="file" name="file" placeholder="Прикрепить файл">
+                    </div>
+                </div>
+                <button class="custom-form__submit btn" type="submit">Отправить форму</button>
+                <p class="custom-form__text">Ответ будет предоставлен по Email. Просьба описывать ситуацию максимально подробно (вид животного, стерилизован или нет, возраст, порода, проблемы со здоворьем если есть)</p>
+            </form>
+        </div>
+    </div>
+
     <script type="module" src="src/js/main.js"></script>
     
 </body>
