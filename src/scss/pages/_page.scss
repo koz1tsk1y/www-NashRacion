@@ -266,3 +266,39 @@
         
     // }
 }
+
+
+
+
+
+@media (max-width: 768px) {
+    .about-section {
+        &__content-media {
+            position: relative;
+        }
+        &__title {
+            max-width: 50%;
+        }
+        &__media {
+            pointer-events: none;
+            position: absolute;
+            top: -6.5rem;
+            right: -4rem;
+            width: 60%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        &__title {
+            max-width: 16.7857rem;
+        }
+        &__media {
+            top: -5.5rem;
+            right: -5.5rem;
+            width: 65%;
+        }
+    }
+}

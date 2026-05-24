@@ -40,6 +40,7 @@ export default defineConfig({
         blog: resolve(root, 'blog.html'),
         article: resolve(root, 'article.html'),
         contacts: resolve(root, 'contacts.html'),
+        about: resolve(root, 'about.html'),
       },
       output: {
         entryFileNames: `js/main.js`,
