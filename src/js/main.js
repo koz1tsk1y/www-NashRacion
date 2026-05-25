@@ -9,6 +9,8 @@ import { customSelectInit } from './_custom-select.js';
 import { quizInit } from './_quiz.js';
 import { previewSliderInit } from './_preview-slider.js';
 import { faqInit } from './_faq.js';
+import { customUploadInit } from './_custom-upload.js';
+import { feedbackPopupInit } from './_feedback-popup.js';
 
 document.addEventListener( 'DOMContentLoaded', function() {
   headerInit();
@@ -19,4 +21,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
   quizInit();
   previewSliderInit();
   faqInit();
+  customUploadInit();
+  feedbackPopupInit();
 })

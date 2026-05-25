@@ -18,16 +18,16 @@
                         <nav class="footer__nav">
                             <ul class="footer__nav-list">
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Наша философия</a>
+                                    <a class="footer__nav-link" href="/about.html">Наша философия</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Технологии и качество</a>
+                                    <a class="footer__nav-link" href="/about.html">Технологии и качество</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">История бренда</a>
+                                    <a class="footer__nav-link" href="/about.html">История бренда</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Сертификаты и производство</a>
+                                    <a class="footer__nav-link" href="/about.html">Сертификаты и производство</a>
                                 </li>
                             </ul>
                         </nav>
@@ -37,16 +37,16 @@
                         <nav class="footer__nav">
                             <ul class="footer__nav-list">
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Корм для кошек</a>
+                                    <a class="footer__nav-link" href="/catalog.html">Корм для кошек</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Корм для собак</a>
+                                    <a class="footer__nav-link" href="/catalog.html">Корм для собак</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Подобрать корм</a>
+                                    <a class="footer__nav-link" href="/catalog.html">Подобрать корм</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Скачать каталог</a>
+                                    <a class="footer__nav-link" href="/catalog.html">Скачать каталог</a>
                                 </li>
                             </ul>
                         </nav>
@@ -56,13 +56,13 @@
                         <nav class="footer__nav">
                             <ul class="footer__nav-list">
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Купить на маркетплейсах</a>
+                                    <a class="footer__nav-link" href="/where-buy.html">Купить на маркетплейсах</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Интернет-магазины</a>
+                                    <a class="footer__nav-link" href="/where-buy.html">Интернет-магазины</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Найти магазин на карте</a>
+                                    <a class="footer__nav-link" href="/where-buy.html">Найти магазин на карте</a>
                                 </li>
                             </ul>
                         </nav>
@@ -72,10 +72,10 @@
                         <nav class="footer__nav">
                             <ul class="footer__nav-list">
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Вопрос-Ответ</a>
+                                    <a class="footer__nav-link" href="/faq.html">Вопрос-Ответ</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Статьи</a>
+                                    <a class="footer__nav-link" href="/blog.html">Статьи</a>
                                 </li>
                             </ul>
                         </nav>
@@ -83,7 +83,7 @@
                     <div class="footer__column">
                         <strong class="footer__column-title">Контакты</strong>
                         <div class="footer__contacts">
-                            <span class="footer__contact" data-feedback>Связаться с нами</span>
+                            <a class="footer__contact" href="/contacts.html">Связаться с нами</a>
                             <a class="footer__contact" href="tel:+70000000000">+7 (000) 000-00-00</a>
                             <address class="footer__contact">
                                 <a href="https://yandex.by/maps/-/CPgDRAoE" target="_blank">г. Москва, ул. Пушкина</a>
@@ -124,37 +124,43 @@
     <!-- /wrapper -->
 
     <div class="feedback-popup">
-        <div class="feedback-popup__body">
-            <button class="feedback-popup__close"></button>
-            <form class="feedback-popup__form custom-form">
-                <div class="custom-form__inputs">
-                    <input class="custom-form__input" type="text" name="fullname" required placeholder="ФИО">
-                    <input class="custom-form__input" type="text" name="region" required placeholder="Регион">
-                    <input class="custom-form__input" type="Email" name="email" required placeholder="Электронная почта">
-                    <input class="custom-form__input" type="tel" name="phone" required placeholder="Телефон">
-                    <textarea class="custom-form__input" name="message" placeholder="Комментарий" rows="5"></textarea>
-                    <div class="custom-radio">
-                        <label class="custom-radio__item">
-                            <input type="radio" name="feedback-type" value="email">
-                            <img src="public/images/icons/email-icon.svg" alt="email">
-                            <span>Электронная почта</span>
-                        </label>
-                        <label class="custom-radio__item">
-                            <input type="radio" name="feedback-type" value="phone">
-                            <img src="public/images/icons/phone-icon.svg" alt="phone">
-                            <span>Телефон</span>
-                        </label>
+        <div class="feedback-popup__container">
+            <div class="feedback-popup__body">
+                <div class="feedback-popup__title title">свяжитесь с нами</div>
+                <form class="feedback-popup__form custom-form">
+                    <div class="custom-form__inputs">
+                        <input class="custom-form__input" type="text" name="fullname" required placeholder="ФИО">
+                        <input class="custom-form__input" type="text" name="region" required placeholder="Регион">
+                        <input class="custom-form__input" type="Email" name="email" required placeholder="Электронная почта">
+                        <input class="custom-form__input" type="tel" name="phone" required placeholder="Телефон">
+                        <textarea class="custom-form__input" name="message" placeholder="Комментарий" rows="5"></textarea>
+                        <div class="custom-radio custom-radio--white">
+                            <label class="custom-radio__item">
+                                <input type="radio" checked="checked" name="feedback-type" value="email">
+                                <img src="public/images/icons/email-icon.svg" alt="email">
+                                <span>Электронная почта</span>
+                            </label>
+                            <label class="custom-radio__item">
+                                <input type="radio" name="feedback-type" value="phone">
+                                <img src="public/images/icons/phone-icon.svg" alt="phone">
+                                <span>Телефон</span>
+                            </label>
+                        </div>
+                        <div class="custom-upload">
+                            <span class="custom-upload__btn btn btn--white">Выберите файл</span>
+                            <span class="custom-upload__label"></span>
+                            <span class="custom-upload__del">Удалить</span>
+                            <input type="file" name="file" placeholder="Прикрепить файл">
+                        </div>
                     </div>
-                    <div class="custom-upload">
-                        <span class="custom-upload__title">Выберите файл:</span>
-                        <span class="custom-upload__btn btn"></span>
-                        <span class="custom-upload__label"></span>
-                        <input type="file" name="file" placeholder="Прикрепить файл">
-                    </div>
-                </div>
-                <button class="custom-form__submit btn" type="submit">Отправить форму</button>
-                <p class="custom-form__text">Ответ будет предоставлен по Email. Просьба описывать ситуацию максимально подробно (вид животного, стерилизован или нет, возраст, порода, проблемы со здоворьем если есть)</p>
-            </form>
+                    <label class="custom-checkbox custom-checkbox--white">
+                        <input type="checkbox" name="agree" required>
+                        Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в <a href="#" target="_blank">Согласии на обработку персональных данных</a> *
+                    </label>
+                    <button class="custom-form__submit btn btn--white" type="submit">Отправить форму</button>
+                </form>
+                <button class="feedback-popup__close"></button>
+            </div>
         </div>
     </div>
 

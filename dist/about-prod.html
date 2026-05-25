@@ -161,16 +161,16 @@
                         <nav class="footer__nav">
                             <ul class="footer__nav-list">
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Наша философия</a>
+                                    <a class="footer__nav-link" href="/about.html">Наша философия</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Технологии и качество</a>
+                                    <a class="footer__nav-link" href="/about.html">Технологии и качество</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">История бренда</a>
+                                    <a class="footer__nav-link" href="/about.html">История бренда</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Сертификаты и производство</a>
+                                    <a class="footer__nav-link" href="/about.html">Сертификаты и производство</a>
                                 </li>
                             </ul>
                         </nav>
@@ -180,16 +180,16 @@
                         <nav class="footer__nav">
                             <ul class="footer__nav-list">
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Корм для кошек</a>
+                                    <a class="footer__nav-link" href="/catalog.html">Корм для кошек</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Корм для собак</a>
+                                    <a class="footer__nav-link" href="/catalog.html">Корм для собак</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Подобрать корм</a>
+                                    <a class="footer__nav-link" href="/catalog.html">Подобрать корм</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Скачать каталог</a>
+                                    <a class="footer__nav-link" href="/catalog.html">Скачать каталог</a>
                                 </li>
                             </ul>
                         </nav>
@@ -199,13 +199,13 @@
                         <nav class="footer__nav">
                             <ul class="footer__nav-list">
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Купить на маркетплейсах</a>
+                                    <a class="footer__nav-link" href="/where-buy.html">Купить на маркетплейсах</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Интернет-магазины</a>
+                                    <a class="footer__nav-link" href="/where-buy.html">Интернет-магазины</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Найти магазин на карте</a>
+                                    <a class="footer__nav-link" href="/where-buy.html">Найти магазин на карте</a>
                                 </li>
                             </ul>
                         </nav>
@@ -215,10 +215,10 @@
                         <nav class="footer__nav">
                             <ul class="footer__nav-list">
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Вопрос-Ответ</a>
+                                    <a class="footer__nav-link" href="/faq.html">Вопрос-Ответ</a>
                                 </li>
                                 <li class="footer__nav-item">
-                                    <a class="footer__nav-link" href="#">Статьи</a>
+                                    <a class="footer__nav-link" href="/blog.html">Статьи</a>
                                 </li>
                             </ul>
                         </nav>
@@ -226,7 +226,7 @@
                     <div class="footer__column">
                         <strong class="footer__column-title">Контакты</strong>
                         <div class="footer__contacts">
-                            <span class="footer__contact" data-feedback>Связаться с нами</span>
+                            <a class="footer__contact" href="/contacts.html">Связаться с нами</a>
                             <a class="footer__contact" href="tel:+70000000000">+7 (000) 000-00-00</a>
                             <address class="footer__contact">
                                 <a href="https://yandex.by/maps/-/CPgDRAoE" target="_blank">г. Москва, ул. Пушкина</a>
@@ -265,6 +265,47 @@
 
     </div>
     <!-- /wrapper -->
+
+    <div class="feedback-popup">
+        <div class="feedback-popup__container">
+            <div class="feedback-popup__body">
+                <div class="feedback-popup__title title">свяжитесь с нами</div>
+                <form class="feedback-popup__form custom-form">
+                    <div class="custom-form__inputs">
+                        <input class="custom-form__input" type="text" name="fullname" required placeholder="ФИО">
+                        <input class="custom-form__input" type="text" name="region" required placeholder="Регион">
+                        <input class="custom-form__input" type="Email" name="email" required placeholder="Электронная почта">
+                        <input class="custom-form__input" type="tel" name="phone" required placeholder="Телефон">
+                        <textarea class="custom-form__input" name="message" placeholder="Комментарий" rows="5"></textarea>
+                        <div class="custom-radio custom-radio--white">
+                            <label class="custom-radio__item">
+                                <input type="radio" checked="checked" name="feedback-type" value="email">
+                                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4%207.00005L10.2%2011.65C11.2667%2012.45%2012.7333%2012.45%2013.8%2011.65L20%207'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M19%205H5C3.89543%205%203%205.89543%203%207V17C3%2018.1046%203.89543%2019%205%2019H19C20.1046%2019%2021%2018.1046%2021%2017V7C21%205.89543%2020.1046%205%2019%205Z'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'/%3e%3c/svg%3e" alt="email">
+                                <span>Электронная почта</span>
+                            </label>
+                            <label class="custom-radio__item">
+                                <input type="radio" name="feedback-type" value="phone">
+                                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.5562%2014.5477L15.1007%2015.0272C15.1007%2015.0272%2014.0181%2016.167%2011.0631%2013.0559C8.10812%209.94484%209.1907%208.80507%209.1907%208.80507L9.47752%208.50311C10.1841%207.75924%2010.2507%206.56497%209.63424%205.6931L8.37326%203.90961C7.61028%202.8305%206.13596%202.68795%205.26145%203.60864L3.69185%205.26114C3.25823%205.71766%202.96765%206.30945%203.00289%206.96594C3.09304%208.64546%203.81071%2012.259%207.81536%2016.4752C12.0621%2020.9462%2016.0468%2021.1239%2017.6763%2020.9631C18.1917%2020.9122%2018.6399%2020.6343%2019.0011%2020.254L20.4217%2018.7584C21.3806%2017.7489%2021.1102%2016.0182%2019.8833%2015.312L17.9728%2014.2123C17.1672%2013.7486%2016.1858%2013.8848%2015.5562%2014.5477Z'%20fill='black'/%3e%3cpath%20d='M13.2595%201.87983C13.3257%201.47094%2013.7122%201.19357%2014.1211%201.25976C14.1464%201.26461%2014.2279%201.27983%2014.2705%201.28933C14.3559%201.30834%2014.4749%201.33759%2014.6233%201.38082C14.9201%201.46726%2015.3347%201.60967%2015.8323%201.8378C16.8286%202.29456%2018.1544%203.09356%2019.5302%204.46936C20.906%205.84516%2021.705%207.17097%2022.1617%208.16725C22.3899%208.66487%2022.5323%209.07947%2022.6187%209.37625C22.6619%209.52466%2022.6912%209.64369%2022.7102%209.72901C22.7197%209.77168%2022.7267%209.80594%2022.7315%209.83125L22.7373%209.86245C22.8034%2010.2713%2022.5286%2010.6739%2022.1197%2010.7401C21.712%2010.8061%2021.3279%2010.53%2021.2601%2010.1231C21.258%2010.1121%2021.2522%2010.0828%2021.2461%2010.0551C21.2337%209.9997%2021.2124%209.91188%2021.1786%209.79572C21.1109%209.56339%2020.9934%209.21806%2020.7982%208.79238C20.4084%207.94207%2019.7074%206.76789%2018.4695%205.53002C17.2317%204.29216%2016.0575%203.59117%2015.2072%203.20134C14.7815%203.00618%2014.4362%202.88865%2014.2038%202.82097C14.0877%202.78714%2013.9417%202.75363%2013.8863%202.7413C13.4793%202.67347%2013.1935%202.28755%2013.2595%201.87983Z'%20fill='black'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M13.4861%205.32931C13.5999%204.93103%2014.015%204.70041%2014.4133%204.8142L14.2073%205.53535C14.4133%204.8142%2014.4133%204.8142%2014.4133%204.8142L14.4148%204.81462L14.4163%204.81507L14.4196%204.81603L14.4274%204.81835L14.4472%204.82452C14.4622%204.82934%2014.4811%204.83562%2014.5035%204.84359C14.5484%204.85953%2014.6078%204.88219%2014.6806%204.91339C14.8263%204.97583%2015.0253%205.07224%2015.2699%205.21695C15.7593%205.50663%2016.4275%205.98781%2017.2125%206.77278C17.9975%207.55776%2018.4786%208.22594%2018.7683%208.71541C18.913%208.95992%2019.0094%209.15898%2019.0719%209.30467C19.1031%209.37747%2019.1258%209.43684%2019.1417%209.48175C19.1497%209.5042%2019.1559%209.52302%2019.1608%209.5381L19.1669%209.5579L19.1692%209.56564L19.1702%209.56897L19.1706%209.57052C19.1706%209.57052%2019.1711%209.57195%2018.4499%209.77799L19.1711%209.57196C19.2849%209.97023%2019.0542%2010.3853%2018.656%2010.4991C18.2611%2010.6119%2017.8496%2010.3862%2017.7317%209.99414L17.728%209.98336C17.7227%209.96833%2017.7117%209.93876%2017.6932%209.89556C17.6562%209.80922%2017.5891%209.66798%2017.4775%209.47939C17.2545%209.10265%2016.8518%208.5334%2016.1518%207.83344C15.4519%207.13349%2014.8826%206.7308%2014.5059%206.50783C14.3173%206.39621%2014.1761%206.3291%2014.0897%206.2921C14.0465%206.27359%2014.0169%206.26255%2014.0019%206.25722L13.9911%206.25354C13.5991%206.13566%2013.3733%205.7242%2013.4861%205.32931Z'%20fill='black'/%3e%3c/svg%3e" alt="phone">
+                                <span>Телефон</span>
+                            </label>
+                        </div>
+                        <div class="custom-upload">
+                            <span class="custom-upload__btn btn btn--white">Выберите файл</span>
+                            <span class="custom-upload__label"></span>
+                            <span class="custom-upload__del">Удалить</span>
+                            <input type="file" name="file" placeholder="Прикрепить файл">
+                        </div>
+                    </div>
+                    <label class="custom-checkbox custom-checkbox--white">
+                        <input type="checkbox" name="agree" required>
+                        Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в <a href="#" target="_blank">Согласии на обработку персональных данных</a> *
+                    </label>
+                    <button class="custom-form__submit btn btn--white" type="submit">Отправить форму</button>
+                </form>
+                <button class="feedback-popup__close"></button>
+            </div>
+        </div>
+    </div>
 
     
 </body>

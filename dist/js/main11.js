@@ -308,6 +308,49 @@ function faqInit() {
 	}
 }
 //#endregion
+//#region src/js/_custom-upload.js
+function customUploadInit() {
+	const wrappers = document.querySelectorAll(".custom-upload");
+	if (!wrappers.length) return;
+	wrappers.forEach((wrapper) => {
+		const input = wrapper.querySelector("input[type=\"file\"]");
+		const btn = wrapper.querySelector(".custom-upload__btn");
+		const label = wrapper.querySelector(".custom-upload__label");
+		const del = wrapper.querySelector(".custom-upload__del");
+		btn.addEventListener("click", () => input.click());
+		input.addEventListener("change", () => {
+			if (input.files.length > 0) label.textContent = input.files[0].name;
+		});
+		del.addEventListener("click", () => {
+			input.value = "";
+			label.textContent = "";
+		});
+	});
+}
+//#endregion
+//#region src/js/_feedback-popup.js
+function feedbackPopupInit() {
+	const popup = document.querySelector(".feedback-popup");
+	if (!popup) return;
+	popup.querySelector(".feedback-popup__body");
+	document.addEventListener("click", (e) => {
+		const openBtn = e.target.closest("[data-feedback]");
+		const closeBtn = e.target.closest(".feedback-popup__close");
+		if (openBtn) {
+			popup.classList.add("feedback-popup--active");
+			return;
+		}
+		if (closeBtn) {
+			popup.classList.remove("feedback-popup--active");
+			return;
+		}
+		if (popup.classList.contains("feedback-popup--active") && !e.target.closest(".feedback-popup__body")) popup.classList.remove("feedback-popup--active");
+	});
+	document.addEventListener("keydown", (e) => {
+		if (e.key === "Escape" && popup.classList.contains("feedback-popup--active")) popup.classList.remove("feedback-popup--active");
+	});
+}
+//#endregion
 //#region src/js/main.js
 document.addEventListener("DOMContentLoaded", function() {
 	headerInit();
@@ -318,5 +361,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	quizInit();
 	previewSliderInit();
 	faqInit();
+	customUploadInit();
+	feedbackPopupInit();
 });
 //#endregion
