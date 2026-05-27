@@ -11,34 +11,26 @@ export function customStickyInit() {
         let stickyHeight = 0;
 
         function recalc() {
-            const rect = sticky.getBoundingClientRect();
-            const scrollTop = window.scrollY;
-
             itemHeight = item.offsetHeight;
             stickyHeight = sticky.offsetHeight;
 
-            // верхняя граница контейнера
             start = sticky.offsetTop;
-
-            // нижняя граница, где item должен остановиться
             end = start + stickyHeight - itemHeight;
         }
 
         function onScroll() {
             const scroll = window.scrollY;
 
-            if (scroll <= start) {
-                // элемент в самом начале контейнера
-                item.style.transform = `translateY(0px)`;
-            } 
-            else if (scroll >= end) {
-                // элемент упёрся в низ контейнера
-                item.style.transform = `translateY(${end - start}px)`;
-            } 
-            else {
-                // элемент прилипает к верху экрана
-                item.style.transform = `translateY(${scroll - start}px)`;
-            }
+            // базовое смещение — как sticky top:0
+            let translate = scroll - start;
+
+            // ограничиваем сверху
+            if (translate < 0) translate = 0;
+
+            // ограничиваем снизу
+            if (scroll >= end) translate = end - start;
+
+            item.style.transform = `translateY(${translate}px)`;
         }
 
         recalc();

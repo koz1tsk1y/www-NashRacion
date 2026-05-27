@@ -510,8 +510,6 @@ function customStickyInit() {
 		let itemHeight = 0;
 		let stickyHeight = 0;
 		function recalc() {
-			sticky.getBoundingClientRect();
-			window.scrollY;
 			itemHeight = item.offsetHeight;
 			stickyHeight = sticky.offsetHeight;
 			start = sticky.offsetTop;
@@ -519,9 +517,10 @@ function customStickyInit() {
 		}
 		function onScroll() {
 			const scroll = window.scrollY;
-			if (scroll <= start) item.style.transform = `translateY(0px)`;
-			else if (scroll >= end) item.style.transform = `translateY(${end - start}px)`;
-			else item.style.transform = `translateY(${scroll - start}px)`;
+			let translate = scroll - start;
+			if (translate < 0) translate = 0;
+			if (scroll >= end) translate = end - start;
+			item.style.transform = `translateY(${translate}px)`;
 		}
 		recalc();
 		onScroll();

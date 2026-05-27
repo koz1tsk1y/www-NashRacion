@@ -1604,6 +1604,10 @@ html, body {
   text-decoration: underline;
 }
 
+.sticky__item {
+  transition: 0.1s all;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
