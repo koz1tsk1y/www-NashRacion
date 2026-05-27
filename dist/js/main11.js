@@ -500,38 +500,6 @@ function transferElementsInit() {
 	}
 }
 //#endregion
-//#region src/js/_custom-sticky.js
-function customStickyInit() {
-	document.querySelectorAll(".sticky").forEach((sticky) => {
-		const item = sticky.querySelector(".sticky__item");
-		if (!item) return;
-		let start = 0;
-		let end = 0;
-		let itemHeight = 0;
-		let stickyHeight = 0;
-		function recalc() {
-			itemHeight = item.offsetHeight;
-			stickyHeight = sticky.offsetHeight;
-			start = sticky.offsetTop;
-			end = start + stickyHeight - itemHeight;
-		}
-		function onScroll() {
-			const scroll = window.scrollY;
-			let translate = scroll - start;
-			if (translate < 0) translate = 0;
-			if (scroll >= end) translate = end - start;
-			item.style.transform = `translateY(${translate}px)`;
-		}
-		recalc();
-		onScroll();
-		window.addEventListener("scroll", onScroll);
-		window.addEventListener("resize", () => {
-			recalc();
-			onScroll();
-		});
-	});
-}
-//#endregion
 //#region src/js/main.js
 document.addEventListener("DOMContentLoaded", function() {
 	headerInit();
@@ -545,6 +513,5 @@ document.addEventListener("DOMContentLoaded", function() {
 	customUploadInit();
 	feedbackPopupInit();
 	transferElementsInit();
-	customStickyInit();
 });
 //#endregion

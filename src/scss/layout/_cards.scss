@@ -53,6 +53,7 @@
         display: flex;
         flex-direction: column;
         &-image {
+            background: #fff;
             border: 0.05rem solid rgba(#144534, 30%);
             border-radius: 1rem;
             overflow: hidden;

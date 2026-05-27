@@ -12,7 +12,6 @@ import { faqInit } from './_faq.js';
 import { customUploadInit } from './_custom-upload.js';
 import { feedbackPopupInit } from './_feedback-popup.js';
 import { transferElementsInit } from './_transfer-elements.js';
-import { customStickyInit } from './_custom-sticky.js';
 
 document.addEventListener( 'DOMContentLoaded', function() {
   headerInit();
@@ -26,5 +25,4 @@ document.addEventListener( 'DOMContentLoaded', function() {
   customUploadInit();
   feedbackPopupInit();
   transferElementsInit();
-  customStickyInit();
 })
