@@ -13,6 +13,9 @@
         img {
             @extend %cover-media;
         }
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
     }
     &__breadcrumbs {
         position: relative;
