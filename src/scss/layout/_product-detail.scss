@@ -1,4 +1,17 @@
 .product-detail {
+  &__desktop-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    &-item {
+      &:has(.product-detail__slider) {
+        flex: 0 0 32.5rem;
+      }
+    }
+    .product-detail__shops {
+      margin-top: 1rem;
+    }
+  }
   &__row {
     display: flex;
     gap: 1rem;
@@ -148,8 +161,14 @@
 
 @media (max-width: 768px) {
   .product-detail {
+    &__desktop-row {
+      display: none;
+    }
     &__row {
       flex-direction: column;
+    }
+    .sticky {
+      transform: none !important;
     }
   }
 }
